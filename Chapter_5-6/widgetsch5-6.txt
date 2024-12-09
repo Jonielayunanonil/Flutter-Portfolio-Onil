@@ -1,0 +1,25 @@
+class EquipmentCard extends StatelessWidget {
+  final String title;
+
+  const EquipmentCard({required this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: EdgeInsets.symmetric(vertical: 8),
+      child: ListTile(
+        leading: Icon(Icons.agriculture, color: Colors.green),
+        title: Text(title),
+      ),
+    );
+  }
+}
+
+// Rented Equipment Card Widget
+class RentedEquipmentCard extends StatelessWidget {
+  final String title;
+  final String rentedBy;
+
+  const RentedEquipmentCard({required this.title, required this.rentedBy});
+
+note: Here I'm just exploring widgets and still experimenting on the application but I think this will be helpful in achieving desired results in my application.

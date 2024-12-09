@@ -1,0 +1,98 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(AnihanRentalApp());
+}
+
+class AnihanRentalApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'AnihanRental',
+      theme: ThemeData(primarySwatch: Colors.green),
+      home: HomeScreen(),
+    );
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('AnihanRental'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Welcome Text
+            Text(
+              'Welcome to AnihanRental!',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 16),
+
+            // Rent Button
+            Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  // Show a message when the button is pressed
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Rent Equipment button pressed!')),
+                  );
+                },
+                child: Text('Rent Equipment'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.green,
+                  padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                ),
+              ),
+            ),
+            SizedBox(height: 32),
+
+            // Featured Equipment Section
+            Text(
+              'Featured Equipment:',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 16),
+
+            // Equipment List (Static Example)
+            Expanded(
+              child: ListView(
+                children: [
+                  EquipmentCard(title: 'Tractor'),
+                  EquipmentCard(title: 'Plow'),
+                  EquipmentCard(title: 'Seeder'),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class EquipmentCard extends StatelessWidget {
+  final String title;
+
+  const EquipmentCard({required this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: EdgeInsets.symmetric(vertical: 8),
+      child: ListTile(
+        leading: Icon(Icons.agriculture, color: Colors.green),
+        title: Text(title),
+      ),
+    );
+  }
+}
+
+
+
+note: This the template that I wanted because it gives a bountiful and nature-ish theme which is attuned to farming.

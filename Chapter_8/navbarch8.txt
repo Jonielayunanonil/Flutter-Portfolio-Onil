@@ -1,0 +1,32 @@
+ type: BottomNavigationBarType.fixed,
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.white70,
+        backgroundColor: Colors.green, // Set navbar background color
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_cart),
+            label: 'Rentals',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.calendar_today),
+            label: 'Calendar',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Settings',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+note: This navbar is really easy for the users to understand and less hassle since there's an icons.

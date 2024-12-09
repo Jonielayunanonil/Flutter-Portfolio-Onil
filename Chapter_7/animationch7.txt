@@ -1,0 +1,11 @@
+body: AnimatedSwitcher(
+        duration: Duration(milliseconds: 300),
+        transitionBuilder: (Widget child, Animation<double> animation) {
+          return SlideTransition(
+            position: animation.drive(
+              Tween(
+                begin: const Offset(1.0, 0.0), // Slide in from the right
+                end: Offset.zero,
+              ).chain(CurveTween(curve: Curves.easeInOut)),
+
+note: It shows here the features of my application that it gives more exciting and it adds elements that can be entertaining.
